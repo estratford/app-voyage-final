@@ -1,0 +1,110 @@
+<form #forfaitForm="ngForm">
+  <mat-form-field appearance="fill" class="half-width">
+    <mat-label>Destination</mat-label>
+    <input
+      type="text"
+      name="id"
+      [(ngModel)]="forfait.id"
+      #destination="ngModel"
+      matInput
+      require
+      placeholder="id"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="half-width">
+    <mat-label>Destination</mat-label>
+    <input
+      type="text"
+      name="destination"
+      [(ngModel)]="forfait.destination"
+      #destination="ngModel"
+      matInput
+      require
+      minlength="2"
+      maxlength="50"
+      placeholder="Destination"
+    />
+    <mat-error
+      *ngIf="
+        destination.invalid &&
+        (destination.dirty || destination.touched) &&
+        destination.hasError('required')
+      "
+      >La destination est obligatoire.</mat-error
+    >
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="half-width">
+    <mat-label>Ville de départ</mat-label>
+    <input
+      type="text"
+      name="villeDepart"
+      [(ngModel)]="forfait.villeDepart"
+      #destination="ngModel"
+      matInput
+      require
+      minlength="2"
+      maxlength="50"
+      placeholder="Ville de départ"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="half-width">
+    <mat-label>Date de départ</mat-label>
+    <input
+      type="text"
+      name="dateDepart"
+      [(ngModel)]="forfait.dateDepart"
+      #destination="ngModel"
+      matInput
+      require
+      placeholder="Date de départ"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="half-width">
+    <mat-label>Date de retour</mat-label>
+    <input
+      type="text"
+      name="dateRetour"
+      [(ngModel)]="forfait.dateRetour"
+      #destination="ngModel"
+      matInput
+      require
+      placeholder="Date de Retour"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="half-width">
+    <mat-label>Prix</mat-label>
+    <input
+      type="text"
+      name="prix"
+      [(ngModel)]="forfait.prix"
+      #destination="ngModel"
+      matInput
+      require
+      placeholder="Prix"
+    />
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="half-width">
+    <mat-label>Rabais</mat-label>
+    <input
+      type="text"
+      name="Rabais"
+      [(ngModel)]="forfait.rabais"
+      #destination="ngModel"
+      matInput
+      require
+      placeholder="Rabais"
+    />
+  </mat-form-field>
+  <button matSuffix type="submit" mat-raised-button (click)="onCancel()">
+    Annuler</button
+  >&nbsp;
+  <button
+    matSuffix
+    type="submit"
+    mat-raised-button
+    [disabled]="!forfaitForm.form.valid"
+    (click)="onSave(forfaitForm)"
+  >
+    ok
+  </button>
+</form>

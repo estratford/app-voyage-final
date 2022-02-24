@@ -1,0 +1,16 @@
+<h2>Graphique selon les destinations</h2>
+<div class="graphique-container">
+  <div>
+    <div class="chart">
+      <canvas
+        baseChart
+        [data]="mesDonnees"
+        [type]="monGraphique.type"
+        [options]="monGraphique.options"
+        [plugins]="monGraphique.plugins"
+        [legend]="monGraphique.legende"
+      >
+      </canvas>
+    </div>
+  </div>
+</div>

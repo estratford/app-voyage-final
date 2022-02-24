@@ -1,0 +1,31 @@
+
+mat-card {
+    margin-top: 200px;
+    padding: 40px;
+    margin: 120px 40px 120px 0 ;
+    min-width: 315px;
+    background: #e3f2fd;
+    box-shadow: 0 5px 10px -1px lightgray !important;
+
+
+    @media(max-width: 1024px){
+        margin: 10px;
+        &:last-child {
+            margin: 30px 30px 60px 30px;
+        }
+    }
+}
+.depart-mini {
+    font-size: 14px;
+    font-weight: bold;
+}
+.date-mini {
+    display: flex;
+    
+    p {
+        margin-right: 8px;
+        font-weight: bold;
+        font-size: 12px;
+        padding: 20px 0;
+    }
+}

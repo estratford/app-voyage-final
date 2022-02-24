@@ -1,0 +1,10 @@
+<div class="title"><h1>Forfait du Mexique seulement</h1></div>
+<div class="forfait-y-container">
+  <ng-container *ngFor="let forfait of forfaits">
+    <app-forfait-item
+      *ngIf="forfait.destination === 'Mexique'"
+      [forfait]="forfait"
+      class="item-y"
+    ></app-forfait-item>
+  </ng-container>
+</div>

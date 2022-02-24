@@ -1,0 +1,23 @@
+.table-forfait-container { 
+    padding: 120px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+
+    .mat-header-cell {
+        padding: 0 10px;
+    }
+
+    .mat-cell {
+        padding: 0 10px;
+    }
+}
+
+.table-forfait-title {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.graphiques {
+    padding-top: 200px;
+
+}

@@ -1,0 +1,15 @@
+.forfait-y-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title {
+    padding: 200px 0 120px 0;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+
+    h1 {
+        font-size: 48px;
+    }
+}

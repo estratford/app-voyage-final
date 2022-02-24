@@ -1,0 +1,98 @@
+
+.forfaitList {
+    background: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px 20px;
+    border: 1px solid #fafafa;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px lightgray;
+    margin-bottom: 60px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+         &-vedette {
+             background: white;
+             border: 8px solid #ad080f;
+         }
+    &:hover {
+        transform: scale(1.02);
+        
+    }
+    .forfait {
+        width: 100%;
+    }
+
+    .controls-container {
+        display: none;
+    }
+
+    mat-card-title{
+        font-size: 28px;
+        color: #253237;
+        font-weight: bold;
+    }
+
+    mat-card-subtitle {
+        font-size: 22px;
+        margin-top: 8px;
+    }
+
+    .subtitle-infos {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        position: relative;
+        align-items: baseline;
+
+
+        .rabaisPrix {
+            font-size: 18px;
+        }
+
+        .displayRabais {
+            position: absolute;
+            bottom: -35px;
+            right: 0;
+            @media (max-width: 767px){
+                bottom: -20px;
+                font-size: 12px;
+            }
+        }
+
+    }
+
+    .date-infos {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+    }
+
+    mat-card-content {
+        .descriptionEndroit {
+            padding-left: 30px;
+            max-width: 800px;
+            font-size: 16px;
+
+            .nbChambres {
+                display: block;
+                padding: 10px 0;
+            }
+        }
+        .activite {
+            font-size: 22px;
+            padding-left: 30px;
+            font-weight: bold;
+            
+        }
+
+    }
+
+    .depart-forfait {
+        font-weight: bold;
+    }
+}
+
+
+

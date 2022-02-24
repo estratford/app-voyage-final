@@ -1,0 +1,19 @@
+
+    <mat-card *ngIf="forfait.vedette === true">
+    <mat-card-title>
+        <h2>{{forfait.destination}}</h2>
+        <h3>{{forfait.hotel.nom}}</h3>
+        <app-star class="star-rating-mini" [nombreEtoiles]="forfait.hotel.nombreEtoiles"></app-star>
+    </mat-card-title>
+        <mat-card-content>    
+            <span class="depart-mini">Départ de: {{forfait.villeDepart}}</span>
+            <div class="date-mini">
+                <p>À partir du {{forfait.dateDepart}} | </p>
+                <p>jusqu'au {{forfait.dateRetour}}</p>
+            </div>
+            <span class="rabaisAppliquer" *ngIf="forfait.rabais > 0">{{forfait.prix - forfait.rabais}}$</span>
+                <span [ngClass]="{'rabaisPrix': true,
+                                'rabaisPrixBarrer': forfait.rabais > 0}">{{forfait.prix}}$</span>
+                <app-bouton-cta></app-bouton-cta>
+        </mat-card-content>
+    </mat-card>

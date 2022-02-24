@@ -1,0 +1,28 @@
+.title {
+    padding: 200px 0 120px 0;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+
+    h1 {
+        font-size: 48px;
+    }
+}
+
+.forfait-x-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media(max-width: 1024px){
+        flex-direction: column;
+    }
+}
+
+.item-x {
+    display: inline-block;
+    margin: 0 32px;
+    @media(max-width: 1024px){
+        margin: 32px 0;
+    }
+}

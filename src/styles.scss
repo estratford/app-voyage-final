@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1, h2, h3, h4 {
+    margin: 0 !important;
+}
+
+h1 {
+    font: 500 48px/40px 'Roboto' !important;
+    @media(max-width: 1024px){
+        font: 500 32px/36px 'Roboto' !important;
+    }
+}
+
+h2 {
+    font: 500 26px/28px 'Roboto' !important;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1140px;
+    margin: 0 auto;
+    @media(max-width: 1024px){
+        padding: 0 64px;
+    }
+    @media(max-width: 767px){
+        padding: 0 16px;
+    }
+}
+
+.wrapper-miniforfait {
+    display: flex;
+    justify-content: center;
+    @media(max-width: 1024px){
+        flex-wrap: wrap;
+    }
+}
+
+.rabaisAppliquer {
+    font-size: 32px;
+    color: green;
+    font-weight: bold;
+    padding-right: 20px;
+    @media(max-width: 767px){
+        padding-right: 10px;
+        font-size: 24px;
+    }
+}
+.rabaisPrixBarrer {
+    color: red;
+    position: relative;
+    font-size: 18px;
+    &::before {
+        content: "";
+        height: 1px;
+        width: 60px;
+        background: red;
+        display: inline-block;
+        position: absolute;
+        top: 25%;
+        left: -10px;
+        transform: rotate(25deg);
+    }
+    @media(max-width: 767px){
+        font-size: 16px;
+    }
+}
+
+.form-control {
+    border: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 60px !important;
+    padding:0 !important;
+    margin: 24px !important;
+
+    input {
+        max-width: 40%;
+    }
+}
+.btnSubmit {
+    margin-left: 24px;
+    border: none;
+    background: blue;
+    color: white;
+    text-transform: uppercase;
+    padding: 13px 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+        &:hover {
+            cursor: pointer;
+            background: #333;
+        }
+}
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

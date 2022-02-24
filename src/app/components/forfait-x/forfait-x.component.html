@@ -1,0 +1,10 @@
+<div class="title"><h1>Forfaits ayant un rabais seulement</h1></div>
+<div class="forfait-x-container">
+  <ng-container *ngFor="let forfait of forfaits">
+    <app-forfait-item
+      *ngIf="forfait.rabais > 0"
+      [forfait]="forfait"
+      class="item-x"
+    ></app-forfait-item>
+  </ng-container>
+</div>

@@ -1,0 +1,25 @@
+.bouton_cta {
+    margin-top: 45px;
+    display: flex;
+    justify-content: end;
+
+    a {
+        padding: 16px 24px;
+        background: blue;
+        border-radius: 24px;
+        color: white;
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-top: 30px;
+        font-weight: bold;
+        transition: 0.3s;
+        box-shadow: 0 5px 10px -1px lightgray !important;
+
+        &:hover {
+            text-decoration: none;
+            background: black;
+            transform: scale(1.05);
+        
+        }
+    }
+}
